@@ -6,7 +6,7 @@ class GameOfBits
     static void Main()
     {
         long num = long.Parse(Console.ReadLine());
-        string binaryNum = Convert.ToString(num, 2);
+        string binaryNum = "00" + Convert.ToString(num, 2);
         string input = null;
         List<long> binaryNumList = new List<long>();
         List<long> tempNumList = new List<long>();
@@ -75,7 +75,6 @@ class GameOfBits
         tempNumList.Reverse();
         tempNumList.ToString();
         string finalNum = String.Join("", tempNumList);
-        string bin = finalNum;
         long l = Convert.ToInt64(finalNum, 2);
 
         Console.WriteLine("{0} -> {1}", l, counter);
